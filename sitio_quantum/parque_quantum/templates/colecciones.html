@@ -1,0 +1,55 @@
+{% extends 'base2.html' %}
+
+<!-- Título de la página -->
+{% block title %}
+Parque Etnobiológico
+{% endblock %}
+
+<!--Contenido de la página -->
+{% block content %}
+  <!--Contenido 1, división importancia y título-->
+  <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                      <h1>Colección Botánica</h1>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col">
+                <br>
+                <p>
+                    La importancia de la colección botánica radica en la ​preservación y estudio de la diversidad de plantas que existen ​en nuestro planeta.
+                    Estos espacios permiten a los científicos y botánicos ​investigar, clasificar y conservar especies vegetales, lo que a ​su vez contribuye al conocimiento y cuidado de nuestro ​entorno natural.
+                    Gracias a las colecciones botánicas, podemos aprender sobre ​las propiedades medicinales de las plantas, su distribución ​geográfica, así como su importancia en la cadena alimentaria ​y en la producción de oxígeno.
+                    Es fundamental valorar y promover la conservación de estas ​colecciones como parte fundamental de la biodiversidad que ​nos rodea.
+                </p>
+        
+            </div>
+        </div>
+  </div>
+
+  <!--Contenido 2, flora y fauna -->
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                <br>
+                <h5>Hay una gran cantidad de flora en Zacatecas</h5>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Puedes consultarla aquí
+                </button>        
+            </div>
+
+            <div class="col">
+                <br>
+                <h5>Hay una gran cantidad de fauna en Zacatecas</h5>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Puedes consultarla aquí
+                </button>       
+            </div>
+        </div>
+    </div>
+{% endblock %}

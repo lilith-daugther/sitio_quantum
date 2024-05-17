@@ -1,0 +1,73 @@
+{% extends 'base2.html' %}
+
+<!-- Título de la página -->
+{% block title %}
+Parque Etnobiológico
+{% endblock %}
+
+<!--Contenido de la página -->
+{% block content %}
+    <h2>Actividades</h2>
+    <!-- Botón para abrir el modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearActividadModal">
+        Crear Nueva Actividad
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="crearActividadModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    lass="modal-title" id="modalLabel">Nueva Actividad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="actividadForm">
+                        <div class="form-group">
+                            <label for="nombreActividad">Nombre de la actividad:</label>
+                            <input type="text" class="form-control" id="nombreActividad" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaActividad">Fecha:</label>
+                            <input type="date" class="form-control" id="fechaActividad" name="fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcionActividad">Descripción:</label>
+                            <textarea class="form-control" id="descripcionActividad" name="descripcion" required></textarea>
+                        </div>
+                        <!-- No olvides manejar la subida de imagen y otros campos si son necesarios -->
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#actividadForm').on('submit', function(e) {
+                e.preventDefault();  // Previene el envío normal del formulario
+
+                console.log("Formulario interceptado");  // Mensaje de depuración
+
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "crear_actividad" %}',
+                    data: $(this).serialize(),  // Serializa los datos del formulario para el envío
+                    success: function(response) {
+                        console.log("Respuesta recibida:", response);  // Mensaje de depuración
+                        $('#crearActividadModal').modal('hide');  // Cierra el modal si el AJAX tiene éxito
+                    },
+                    error: function(xhr, errmsg, err) {
+                        console.log("Error en AJAX:", xhr.status, xhr.responseText);  // Mensaje de depuración
+                    }
+                });
+            });
+        });
+    </script>
+
+{% endblock %}

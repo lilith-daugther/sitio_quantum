@@ -1,0 +1,306 @@
+{% extends 'base2.html' %}
+
+<!-- Título de la página -->
+{% block title %}
+Parque Etnobiológico
+{% endblock %}
+
+<!-- --> 
+<!--Contenido de la página -->
+{% block content %}
+    <!--Contenido 1, título y explicación -->
+    <div class="card">
+        <div class="card-body">
+            <div class="row align-items-start">
+                <div class="col">
+                    El estado de Zacatecas exhibe una notable diversidad de ​ecosistemas, influenciada por sus características climáticas y ​topográficas. En las regiones serranas, se encuentran bosques ​de coníferas y latifoliadas, así como selvas bajas.
+                    En contraste, la región de la Mesa Central se caracteriza por ​áreas con precipitación escasa, que se clasifican como zonas ​áridas y semiáridas. Aquí predominan el matorral crasicaule, ​el desierto micrófilo y rosetófilo, así como mezquitales y ​vegetación de galería, junto con otras áreas forestales y no ​forestales.
+                    Los municipios con mayor diversidad forestal incluyen ​Sombrerete, Tepetongo y Valparaíso (CONANP, 2014)
+                </div>
+                <div class="col">
+                    <h2>Biodiversidad</h2>
+                </div>
+              </div>
+        </div>
+    </div>
+    <br>
+    <!--Contenido 2, MATORRALES -->
+    <div>
+        <img src="../static/media/images/actividades/1.jpg" class="d-block w-100" alt="Descripción de la imagen 2">
+        <p>
+            Los matorrales, caracterizados por arbustos de menos de 4 metros de altura, son típicos de climas secos con lluvias escasas y suelos ​frágiles que propician la desertificación. 
+            Este tipo de vegetación constituye el grupo más diverso en cuanto a comunidades vegetales, ​con una composición de especies que varía según la región. 
+            En Zacatecas, estos matorrales ocupan una extensión considerable, ​principalmente en los municipios de Mazapil, Concepción del Oro, El Salvador, Melchor O. Campo y Villa de Cos (CONANP, 2014)
+        </p>
+        <hr>
+        <br>
+
+
+        <!--Apartado de matorrales --> 
+        <div class="row align-items-start">
+                <div class="col">
+                        <p>
+                            El paisaje más extendido en el área se caracteriza por arbustos de hojas ​pequeñas, con o sin espinas, destacando 
+                            Larrea tridentata (gobernadora) como ​especie dominante en los valles del desierto y semidesierto. 
+                            Este tipo de ​vegetación prevalece en valles inter-montanos, al pie de monte y en planicies ​extensas, donde los suelos son más profundos. 
+                            Se divide en dos subtipos: el ​matorral inerme, donde predominan especies sin espinas como Larrea ​tridentata, Cordia greggi y Viquiera brevifolia; y el matorral subinerme, ​caracterizado por especies de hojas compuestas, incluyendo especies espinosas ​como Larrea tridentata, Acacia spp. y Mimosa spp., en asociación con especies ​de hojas simples(CONANP, 2014)
+
+
+                        </p>
+                               
+                </div>
+        
+                <div class="col"> 
+                    <br>  
+                    <h5>MATORRAL DESÉRTICO MICRÓFILO</h5>
+                    <br>
+                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                        Quieres saber más?
+                    </button>    
+                </div>
+        </div>
+        <hr>
+
+        <!--Apartado de matorrales --> 
+        <div class="row align-items-start">
+            <div class="col">
+                <h5>MATORRAL DESÉRTICO ROSETÓFILO</h5>   
+                <br>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>       
+            </div>
+    
+            <div class="col"> 
+                <br>  
+                <p>
+                    Se desarrolla principalmente en terrenos someros con pendientes mayores al 20%, en lomeríos, en bajadas y cimas de sierras y cerros. 
+                    Dominan las especies con hojas alargadas gruesas de tipo coriáceas, con o sin espinas, dispuestas en forma de roseta(CONANP, 2014).
+
+                </p>
+                 
+            </div>
+        </div>
+        <br>
+
+        <!--Tabla de matorrales --> 
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td colspan="6" style="text-align: center;">Matorral crasicaule (de tallos carnosos)</td>
+                </tr>
+                <tr>
+                    <th scope="col">Familia</th>
+                    <th scope="col">Nombre Científico</th>
+                    <th scope="col">Nombre Común</th>
+                    <th scope="col">Categoría NOM-059</th>
+                    <th scope="col">Status del Hábitad</th>
+                    <th scope="col">Usos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="7">Cactaceae</td>
+                    <td>Ariocarpus fissuratus</td>
+                    <td>Biznaga peyotillo</td>
+                    <td>En peligro de extinción (P)</td>
+                    <td>Endémica</td>
+                    <td>Ornato y Artesanal</td>
+                </tr>
+                <tr>
+                    <td>Ariocarpus retusus</td>
+                    <td>Biznaga maguey peyote cimarrón</td>
+                    <td>Sujeta a protección especial (Pr)</td>
+                    <td>Endémica</td>
+                    <td>Ornato y Artesanal</td>
+                </tr>
+                <tr>
+                    <td>Echinocactus ​platyacanthus</td>
+                    <td>Biznaga burra</td>
+                    <td>En peligro de ​extinción (P)</td>
+                    <td>Endémica</td>
+                    <td> Alimento  y ​Ornato y ​Artesana</td>
+                </tr>
+                <tr>
+                    <td>Ferocactus ​haematacanthus</td>
+                    <td>Biznaga barril de ​puebla</td>
+                    <td>En peligro de ​extinción (P)</td>
+                    <td>Endémica</td>
+                    <td> Alimento  y ​Ornato y ​Artesana</td>
+                </tr>
+                <tr>
+                    <td>Ferocactus histrix</td>
+                    <td>Biznaga de ​acitrón</td>
+                    <td>Sujeta a ​protección ​especial (Pr)</td>
+                    <td>Endémica</td>
+                    <td> Alimento  y ​Ornato y ​Artesana</td>
+                </tr>
+                <tr>
+                    <td>Ferocactus pilosus</td>
+                    <td>Arril de lima</td>
+                    <td>Sujeta a ​protección ​especial (Pr)</td>
+                    <td>Endémica</td>
+                    <td> Alimento  y ​Ornato y ​Artesana</td>
+                </tr>
+                <tr>
+                    <td>Hamatocactus ​hamatacanthus</td>
+                    <td>Biznaga barril ​costillona</td>
+                    <td>En peligro de extinción (P)</td>
+                    <td>...</td>
+                    <td>Ornato y Artesanal</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+            Quieres saber más?
+        </button> 
+        <hr>
+        <br>
+
+        <!--Apartado vegetación halófila --> 
+        <div class="row align-items-start">
+            <div class="col">
+                <p>
+                    Asociación en la que dominan las gramíneas, particularmente adaptadas ​a condiciones de deficiencia de drenaje y suelos pobres con exceso de ​sales (halófilas) (CONANP, 2014).
+                </p>  
+                <br>
+                   
+            </div>
+    
+            <div class="col"> 
+                <br>  
+                <h5>
+                    VEGETACIÓN HALÓFILA
+                </h5>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>    
+                 
+            </div>
+        </div>
+        <hr>
+        <br>
+
+
+        <!--Apartado pastizal --> 
+        <img src="../static/media/images/actividades/1.jpg" class="d-block w-100" alt="Descripción de la imagen 2">
+        <br>
+        <div class="row align-items-start">
+            <div class="col">
+                <p>
+                    Dominada principalmente por mezquites (Prosopis spp.), que se ​desarrollan como árboles espinosos de 5 a 10 m de altura bajo ​condiciones de humedad, o como arbustos en condiciones de aridez. ​Crecen frecuentemente en aluviones cercanos a escorrentías (CONANP, ​2014).
+                </p>  
+                <br>
+                   
+            </div>
+    
+            <div class="col"> 
+                <br>  
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>    
+                 
+            </div>
+        </div>
+        <hr>
+        <br>
+        
+        <!--Apartado bosque templado --> 
+        <img src="../static/media/images/actividades/1.jpg" class="d-block w-100" alt="Descripción de la imagen 2">
+        <br>
+        <div class="row align-items-start">
+            <div class="col">
+                <p>
+                    Los bosques de coníferas, con vegetación perenne dominada por ​gimnospermas, se encuentran principalmente en las zonas montañosas ​del país, distribuyéndose en altitudes que van desde el nivel del mar ​hasta los 4,000 metros sobre el nivel del mar. En Zacatecas, estos ​bosques, representados por pino y táscate, se localizan sobre los 1,450 ​metros sobre el nivel del mar, principalmente en la región oeste de la ​Sierra Madre Occidental. Cubren 1159.534 km2, aproximadamente el 2.2 ​% de la superficie forestal del estado, distribuidos en 18 municipios, con ​destacada presencia en Sombrerete, Valparaíso y Fresnillo. Mazapil es el ​municipio con mayor extensión de bosque de pino, mientras que ​Concepción del Oro destaca por su bosque de táscate. La mayoría de la ​superficie está ocupada por bosques de pino, representando el 95%, ​mientras que el bosque de táscate ocupa el 5% restante.
+                </p>  
+                <br>
+                   
+            </div>
+    
+            <div class="col"> 
+                <br>  
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>    
+                 
+            </div>
+        </div>
+        <hr>
+        <br>
+
+        <!--Apartado LATIFOLIADAS --> 
+        <div class="row align-items-start">
+            <div class="col">
+                <p>
+                    Los bosques de latifoliadas, caracterizados por árboles de hoja ancha ​mayormente caducifolios, como los encinos, se encuentran ​principalmente en climas templados en áreas montañosas, aunque ​ocasionalmente pueden desarrollarse en lugares cálidos. Estos bosques ​son aprovechados para la producción de carbón y la cría de ganado, lo ​que a menudo conduce a la degradación de la vegetación. En Zacatecas, ​ocupan el 9.2% de la superficie total de bosques arbolados, destacando ​por su relevancia económica, social y cultural, especialmente en los ​municipios del oeste del estado.
+
+    
+                </p>  
+                <br>
+                   
+            </div>
+    
+            <div class="col"> 
+                <br>  
+                <h5>
+                    LATIFOLIADAS.
+                </h5>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>    
+                 
+            </div>
+        </div>
+        <hr>
+        <br>
+
+        <!--Apartado BOSQUE DE GALERIA --> 
+        <img src="../static/media/images/actividades/1.jpg" class="d-block w-100" alt="Descripción de la imagen 2">
+        <br>
+        <div class="row align-items-start">
+            <div class="col">
+                <p>
+                    Los bosques de coníferas, con vegetación perenne dominada por gimnospermas, ​se encuentran principalmente en las zonas montañosas del país, distribuyéndose ​en altitudes que van desde el nivel del mar hasta los 4,000 metros sobre el nivel ​del mar. En Zacatecas, estos bosques, representados por pino y táscate, se ​localizan sobre los 1,450 metros sobre el nivel del mar, principalmente en la ​región oeste de la Sierra Madre Occidental. Cubren 1159.534 km2, ​aproximadamente el 2.2 % de la superficie forestal del estado, distribuidos en 18 ​municipios, con destacada presencia en Sombrerete, Valparaíso y Fresnillo. ​Mazapil es el municipio con mayor extensión de bosque de pino, mientras que ​Concepción del Oro destaca por su bosque de táscate. La mayoría de la superficie ​está ocupada por bosques de pino, representando el 95%, mientras que el bosque ​de táscate ocupa el 5% restante.
+
+    
+                </p>  
+                <br>
+                   
+            </div>
+    
+            <div class="col"> 
+                <br>  
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>    
+                 
+            </div>
+        </div>
+        <hr>
+        <br>
+
+        <!--Apartado SELVA BAJA --> 
+        <div class="row align-items-start">
+            <div class="col">
+                <img src="../static/media/images/actividades/1.jpg" class="d-block w-100" alt="Descripción de la imagen 2">      
+            </div>
+    
+            <div class="col"> 
+                <br>
+                <p>
+                    En el estado de Zacatecas, la presencia de selvas bajas ​se manifiesta en dos tipos principales: la selva baja ​caducifolia (SBC) y la selva baja subcaducifolia (SBS). ​Estas se desarrollan en regiones con una precipitación ​anual de hasta 1,200 milímetros, caracterizadas por ​una temporada seca bien definida y con preferencia ​por suelos con buen drenaje. Su presencia se ​concentra principalmente en el sur y suroeste del ​estado (GEZ, 2013).
+                    Con una extensión total de 3,856,534 km², ​representan el 7.2 % de la superficie forestal y el 5.2 % ​del territorio estatal. Destacan en 27 municipios, ​siendo Valparaíso, 
+                    Moyahua de Estrada y Jalpa los más ​relevantes en términos de superficie. La selva baja ​caducifolia abarca más del 99.0 % del área, mientras ​que la subcaducifolia se 
+                    limita a Juchipila. Entre las ​especies predominantes se encuentran Ipomoea ​murucoides, Bursera fagaroides, Eysenhardtia ​polystachya, Opuntia leucotricha y O. streptacantha, 
+                    ​que representan el 38.0 % de la población vegetal.
+                </p>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.5rem; --bs-btn-font-size: .75rem;">
+                    Quieres saber más?
+                </button>    
+                 
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
