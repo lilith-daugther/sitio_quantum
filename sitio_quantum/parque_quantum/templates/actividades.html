@@ -7,11 +7,19 @@ Parque Etnobiológico
 
 <!--Contenido de la página -->
 {% block content %}
-    <h2>Actividades</h2>
-    <!-- Botón para abrir el modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearActividadModal">
-        Crear Nueva Actividad
-    </button>
+<h1>Lista de Actividades</h1>
+<ul>
+    {% for actividad in actividades %}
+        <li>
+            <h2>{{ actividad.nombre }}</h2>
+            <p>{{ actividad.descripcion }}</p>
+            <p><strong>Fecha:</strong> {{ actividad.fecha }}</p>
+            {% if actividad.imagen %}
+                <img src="{{ actividad.imagen.url }}" alt="{{ actividad.nombre }}">
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
   
 
 {% endblock %}

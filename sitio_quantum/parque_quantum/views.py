@@ -70,4 +70,4 @@ class ActividadesDeleteView(DeleteView):
 
 def lista_actividades(request):
     actividades = Actividades.objects.all().order_by('-fecha')
-    return render(request, 'actividades/lista_actividades.html', {'actividades': actividades})
+    return render(request, 'templates/actividades.html', {'actividades': actividades})
