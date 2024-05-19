@@ -17,10 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from parque_quantum.views import ActividadListView, ActividadCreateView, ActividadUpdateView, ActividadDeleteView
 from django.urls import path
 from parque_quantum import views
-
+from parque_quantum.views import ActividadesListView, ActividadesCreateView, ActividadesUpdateView, ActividadesDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,10 +30,12 @@ urlpatterns = [
     path('colecciones/', views.colecciones, name="colecciones"),
     path('biodiversidad/', views.biodiversidad, name="biodiversidad"),
     path('actividades/', views.actividades, name="actividades"),
-     path('', ActividadListView.as_view(), name='actividad_list'),
-    path('new/', ActividadCreateView.as_view(), name='actividad_new'),
-    path('edit/<int:pk>/', ActividadUpdateView.as_view(), name='actividad_edit'),
-    path('delete/<int:pk>/', ActividadDeleteView.as_view(), name='actividad_delete'),
-    path('nueva_actividad/', views.crear_actividad, name='crear_actividad'),
+    path('lista/', ActividadesListView.as_view(), name='lista'),
+    path('nuevo/', ActividadesCreateView.as_view(), name='nuevo'),
+    path('editar/<int:pk>/', ActividadesUpdateView.as_view(), name='editar'),
+    path('borrar/<int:pk>/', ActividadesDeleteView.as_view(), name='borrar'),
+    path('CRUDactividades/', views.CRUDactividades, name="CRUDactividades"),
+
+    
 
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

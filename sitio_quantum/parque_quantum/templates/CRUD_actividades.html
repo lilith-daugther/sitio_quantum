@@ -1,0 +1,39 @@
+{% extends "base2.html" %}  <!-- Si tienes una plantilla base, extiéndela aquí -->
+{% load static %}
+
+<!-- Título de la página -->
+{% block title %}
+Parque Etnobiológico
+{% endblock %}
+
+{% block content %}
+  <h2>Lista de Modelos</h2>
+  <a href="{% url 'nuevo' %}" class="btn btn-primary">Añadir Nuevo</a>  <!-- Asegúrate de que el nombre de la URL coincide con el definido en urls.py -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Fecha</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for objeto in objetos %}
+        <tr>
+          <td>{{ objeto.nombre }}</td>
+          <td>{{ objeto.descripcion }}</td>
+          <td>{{ objeto.fecha }}</td>
+          <td>
+            <img src="{{ objeto.imagen.url }}" alt="{{ objeto.nombre }}" width="100">  <!-- Ajusta el tamaño según necesites -->
+          </td>
+          <td>
+            <a href="{% url 'editar' objeto.id %}" class="btn btn-info">Editar</a>
+            <a href="{% url 'borrar' objeto.id %}" class="btn btn-danger">Borrar</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

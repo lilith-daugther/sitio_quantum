@@ -1,0 +1,17 @@
+{% extends "base2.html" %}  <!-- Si tienes una plantilla base, extiéndela aquí -->
+{% load static %}
+
+<!-- Título de la página -->
+{% block title %}
+Parque Etnobiológico
+{% endblock %}
+
+{% block content %}
+  <h2>{% if object %}Editar{% else %}Nuevo{% endif %} Modelo</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">{% if object %}Actualizar{% else %}Crear{% endif %}</button>
+    <a href="{% url 'CRUDactividades' %}" class="btn btn-secondary">Cancelar</a>
+  </form>
+{% endblock %}

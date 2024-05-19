@@ -3,11 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from .models import Actividad
-from .forms import ActividadForm
-from django.http import JsonResponse
-from .models import Actividad
-from django.views.decorators.csrf import csrf_exempt
+from .models import Actividades
+from .admin import ActividadesAdmin
 
 
 def inicio(request):
@@ -46,34 +43,31 @@ def biodiversidad(request):
 def actividades(request):
     return render(request, "actividades.html")
 
-
-class ActividadListView(ListView):
-    model = Actividad
-    context_object_name = 'actividades'
-
-class ActividadCreateView(CreateView):
-    model = Actividad
-    form_class = ActividadForm
-    success_url = reverse_lazy('actividades')
-
-class ActividadUpdateView(UpdateView):
-    model = Actividad
-    form_class = ActividadForm
-    success_url = reverse_lazy('actividades')
-
-class ActividadDeleteView(DeleteView):
-    model = Actividad
-    success_url = reverse_lazy('actividades')
+def CRUDactividades(request):
+    return render(request, "CRUD_actividades.html")
 
 
-@csrf_exempt  # Solo para demostración; idealmente maneja la CSRF de otra forma
-def crear_actividad(request):
-    print('hola entrè')
-    if request.method == 'POST':
-        nombre = request.POST.get('nombre')
-        fecha = request.POST.get('fecha')
-        descripcion = request.POST.get('descripcion')
-        actividad = Actividad.objects.create(nombre=nombre, fecha=fecha, descripcion=descripcion)
-        return JsonResponse({'id': actividad.id})  # Retorna el id de la actividad creada o algún mensaje
-    return JsonResponse({'error': 'Método no permitido'}, status=405)
+# CRUD de actividades
+class ActividadesListView(ListView):
+    model = Actividades
+    context_object_name = 'objetos'
 
+class ActividadesCreateView(CreateView):
+    model = Actividades
+    form_class = ActividadesAdmin
+    success_url = reverse_lazy('lista')
+    template_name = 'actividades_form.html'
+
+class ActividadesUpdateView(UpdateView):
+    model = Actividades
+    form_class = ActividadesAdmin
+    success_url = reverse_lazy('lista')
+
+class ActividadesDeleteView(DeleteView):
+    model = Actividades
+    success_url = reverse_lazy('lista')
+    template_name = 'mi_app/Actividades_confirm_delete.html'
+
+def lista_actividades(request):
+    actividades = Actividades.objects.all().order_by('-fecha')
+    return render(request, 'actividades/lista_actividades.html', {'actividades': actividades})
