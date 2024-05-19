@@ -1,25 +1,23 @@
 {% extends 'base2.html' %}
 
-<!-- Título de la página -->
-{% block title %}
-Parque Etnobiológico
-{% endblock %}
+{% block title %}Lista de Actividades{% endblock %}
 
-<!--Contenido de la página -->
 {% block content %}
-<h1>Lista de Actividades</h1>
-<ul>
+<h1 class="my-4">Lista de Actividades</h1>
+<div class="row">
     {% for actividad in actividades %}
-        <li>
-            <h2>{{ actividad.nombre }}</h2>
-            <p>{{ actividad.descripcion }}</p>
-            <p><strong>Fecha:</strong> {{ actividad.fecha }}</p>
-            {% if actividad.imagen %}
-                <img src="{{ actividad.imagen.url }}" alt="{{ actividad.nombre }}">
-            {% endif %}
-        </li>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                {% if actividad.imagen %}
+                    <img src="{{ actividad.imagen.url }}" class="card-img-top" alt="{{ actividad.nombre }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ actividad.nombre }}</h5>
+                    <p class="card-text">{{ actividad.descripcion }}</p>
+                    <p class="card-text"><small class="text-muted">Fecha: {{ actividad.fecha }}</small></p>
+                </div>
+            </div>
+        </div>
     {% endfor %}
-</ul>
-  
-
+</div>
 {% endblock %}

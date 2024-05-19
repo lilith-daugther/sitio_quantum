@@ -19,7 +19,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from parque_quantum import views
-from parque_quantum.views import ActividadesListView, ActividadesCreateView, ActividadesUpdateView, ActividadesDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,13 +28,6 @@ urlpatterns = [
     path('enviar_correo/', views.enviar_correo, name='enviar_correo'),
     path('colecciones/', views.colecciones, name="colecciones"),
     path('biodiversidad/', views.biodiversidad, name="biodiversidad"),
-    path('actividades/', views.actividades, name="actividades"),
-    path('lista/', ActividadesListView.as_view(), name='lista'),
-    path('nuevo/', ActividadesCreateView.as_view(), name='nuevo'),
-    path('editar/<int:pk>/', ActividadesUpdateView.as_view(), name='editar'),
-    path('borrar/<int:pk>/', ActividadesDeleteView.as_view(), name='borrar'),
-    path('CRUDactividades/', views.CRUDactividades, name="CRUDactividades"),
-
-    
+    path('actividades/', views.lista_actividades, name="actividades"),
 
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -43,31 +43,6 @@ def biodiversidad(request):
 def actividades(request):
     return render(request, "actividades.html")
 
-def CRUDactividades(request):
-    return render(request, "CRUD_actividades.html")
-
-
-# CRUD de actividades
-class ActividadesListView(ListView):
-    model = Actividades
-    context_object_name = 'objetos'
-
-class ActividadesCreateView(CreateView):
-    model = Actividades
-    form_class = ActividadesAdmin
-    success_url = reverse_lazy('lista')
-    template_name = 'actividades_form.html'
-
-class ActividadesUpdateView(UpdateView):
-    model = Actividades
-    form_class = ActividadesAdmin
-    success_url = reverse_lazy('lista')
-
-class ActividadesDeleteView(DeleteView):
-    model = Actividades
-    success_url = reverse_lazy('lista')
-    template_name = 'mi_app/Actividades_confirm_delete.html'
-
 def lista_actividades(request):
     actividades = Actividades.objects.all().order_by('-fecha')
-    return render(request, 'templates/actividades.html', {'actividades': actividades})
+    return render(request, 'actividades.html', {'actividades': actividades})
