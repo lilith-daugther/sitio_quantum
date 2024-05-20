@@ -43,6 +43,9 @@ def biodiversidad(request):
 def actividades(request):
     return render(request, "actividades.html")
 
+def proyeccion(request):
+    return render(request, "proyeccion.html")
+
 def lista_actividades(request):
     actividades = Actividades.objects.all().order_by('-fecha')
     return render(request, 'actividades.html', {'actividades': actividades})
