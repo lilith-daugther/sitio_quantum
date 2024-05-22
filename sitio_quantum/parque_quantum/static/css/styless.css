@@ -10,10 +10,7 @@
 body {
     background: #000;
 }
-.navbar-custom {
-  background-color: #004080; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-}
+
 
 .navbar-custom .navbar-nav .nav-link {
   color: #ffffff; /* Color del texto de los enlaces */
@@ -25,7 +22,11 @@ body {
   color: #cccccc; /* Color del texto al pasar el ratón y para el enlace activo */
 }
 
-  
+.card-custom {
+  background-color: #6a1b9a; /* Un color púrpura */
+  color: #ffffff; /* Texto blanco */
+}
+
 
 /* Clase del footer  */
 .footer {
@@ -71,4 +72,5 @@ body {
     align-items: center; /* Centra verticalmente */
     height: 10vh; /* Altura del viewport */
 }
+
   
