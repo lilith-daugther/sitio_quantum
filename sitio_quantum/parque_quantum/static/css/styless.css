@@ -108,3 +108,43 @@ body {
 .social-icons i {
   font-size: 24px; /* Tamaño de los iconos */
 }
+.container-centred {
+  display: flex;          /* Establece Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+  height: 40vh;
+}
+
+#imagenCircular {
+  width: 200px;   /* Ancho de la imagen */
+  height: 200px;  /* Alto de la imagen, debe ser igual al ancho */
+  border-radius: 50%;  /* Esto hace que la imagen sea circular */
+  object-fit: cover;  /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.boton-personalizado-cafe {
+  background-color: #3A2C1A; /* Color de fondo verde */
+  color: white; /* Color de texto blanco */
+  border: none; /* No border */
+  padding: 10px 25px; /* Padding alrededor del texto */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Tipo de display */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen alrededor del botón */
+  cursor: pointer; /* Cursor en forma de mano */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+.boton-personalizado-cafe:hover {
+  background-color: #687E45; /* Color de fondo más oscuro en hover */
+}
+
+.boton-personalizado-cafe:active {
+  background-color: #3e8e41; /* Color de fondo aún más oscuro cuando el botón es presionado */
+}
+
+.boton-personalizado-cafe:focus {
+  outline: none; /* Elimina el contorno que algunos navegadores añaden al enfocar un botón */
+  border-color: #4CAF50;
+}
