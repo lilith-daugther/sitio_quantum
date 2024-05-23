@@ -45,6 +45,12 @@ body {
   font-family: 'Verdana',sans-serif !important;
 }
 
+.card-custom2 {
+  background-color: #6b5744 !important; 
+  color: #ffffff !important;
+  font-family: 'Verdana',sans-serif !important;
+}
+
 /*Personalización de los parrafos*/
 .paragraph {
   font-family: 'Verdana',sans-serif !important;
