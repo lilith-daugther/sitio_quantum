@@ -126,8 +126,8 @@ body {
   background-color: #3A2C1A; /* Color de fondo verde */
   color: white; /* Color de texto blanco */
   border: none; /* No border */
-  padding: 10px 25px; /* Padding alrededor del texto */
-  text-align: center; /* Alineación del texto */
+  padding: 10px 20px; /* Padding alrededor del texto */
+  text-align: justify; /* Alineación del texto */
   text-decoration: none; /* Sin subrayado */
   display: inline-block; /* Tipo de display */
   font-size: 16px; /* Tamaño de fuente */
@@ -148,3 +148,44 @@ body {
   outline: none; /* Elimina el contorno que algunos navegadores añaden al enfocar un botón */
   border-color: #4CAF50;
 }
+
+.boton-personalizado-verde {
+  background-color: #687E45; /* Color de fondo verde */
+  color: white; /* Color de texto blanco */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding alrededor del texto */
+  text-align: justify; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Tipo de display */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen alrededor del botón */
+  cursor: pointer; /* Cursor en forma de mano */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+.boton-personalizado-verde:hover {
+  background-color: #3A2C1A; /* Color de fondo más oscuro en hover */
+}
+
+.boton-personalizado-verde:active {
+  background-color: #3A2C1A; /* Color de fondo aún más oscuro cuando el botón es presionado */
+}
+
+.boton-personalizado-verde:focus {
+  outline: none; /* Elimina el contorno que algunos navegadores añaden al enfocar un botón */
+  border-color: #3A2C1A;
+}
+
+.table-custom thead th {
+        background-color: #6B5744; /* Color de fondo para los encabezados */
+        color: white; /* Color del texto para los encabezados */
+    }
+    .table-custom tbody td {
+        background-color: #f8f9fa; /* Color de fondo para las celdas */
+    }
+    .table-custom {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra sutil alrededor de la tabla */
+        border-collapse: separate; 
+        border-spacing: 0 15px; /* Espaciado entre filas */
+    }
+
