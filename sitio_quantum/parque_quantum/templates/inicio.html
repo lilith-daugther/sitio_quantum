@@ -159,7 +159,7 @@ Parque Etnobiológico
                 e.preventDefault(); // Detiene la acción por defecto del formulario
               
                 $.ajax({
-                  url: '/enviar_correo/', // Asegúrate de que esta URL es correcta y procesa el POST
+                  url: '/enviar_correo/', 
                   type: 'POST',
                   data: $(this).serialize(), // Serializa los datos del formulario para el envío
                   headers: {'X-CSRFToken': csrftoken}, // Incluye el token CSRF en la cabecera
