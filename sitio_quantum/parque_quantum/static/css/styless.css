@@ -8,10 +8,12 @@
     
 }
 
+/*Cuerpo de la página*/
 body {
   padding-top: 70px;
 }
 
+/*Barra de navegación */
 .navbar-nav {   
   width: 100%;
   justify-content: center;
@@ -27,11 +29,9 @@ body {
   color: #ffffff; 
   
 }
-
 .navbar-custom .navbar-nav .nav-link {
   color: #ffffff; /* Color del texto de los enlaces */
 }
-
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link:hover,
 .navbar-custom .navbar-nav .nav-item.active .nav-link {
@@ -50,11 +50,35 @@ body {
   color: #ffffff !important;
   font-family: 'Verdana',sans-serif !important;
 }
-
+.card-custom3{
+  width: 100%; /* Ajusta el ancho del card a un porcentaje del contenedor */
+  margin: 20px auto; /* Centra el card y añade algo de margen alrededor */
+}
 /*Personalización de los parrafos*/
 .paragraph {
   font-family: 'Verdana',sans-serif !important;
 }
+p {
+  max-width: 60ch; /* ch es una unidad que representa el ancho del carácter '0' */
+  letter-spacing: 0.5px;
+  line-height: 1.6; /* Proporciona suficiente espacio vertical entre líneas de texto */
+}
+@media (max-width: 768px) {
+  .row .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .row img {
+      height: auto;
+      max-width: 100%;
+      margin-bottom: 20px; /* Añade un poco de espacio entre la imagen y el texto */
+  }
+  .row p {
+      font-size: 16px; /* Ajusta el tamaño de la fuente para mejorar la legibilidad en pantallas pequeñas */
+  }
+}
+
+
 
 /* Clase del footer  */
 .footer {
@@ -88,9 +112,7 @@ body {
     }
   }
 
-  /*
-  Ajustes del contenedor principal
-  */
+  /* Ajustes del contenedor principal */
   .contenedor {
 
     width: 5%; /* Ancho del contenedor */
@@ -101,6 +123,7 @@ body {
     height: 10vh; /* Altura del viewport */
 }
 
+/*Elementos del footer */
 .social-icons a {
   color: #fff; /* Color de los iconos */
   margin-right: 10px; /* Espaciado entre iconos */
@@ -121,6 +144,7 @@ body {
   height: 40vh;
 }
 
+/*Forma de imagénes circulares */
 #imagenCircular {
   width: 200px;   /* Ancho de la imagen */
   height: 200px;  /* Alto de la imagen, debe ser igual al ancho */
@@ -128,6 +152,7 @@ body {
   object-fit: cover;  /* Asegura que la imagen cubra el espacio sin distorsionarse */
 }
 
+/*Botones personalizados */
 .boton-personalizado-cafe {
   background-color: #3A2C1A; /* Color de fondo verde */
   color: white; /* Color de texto blanco */
@@ -182,58 +207,72 @@ body {
   border-color: #3A2C1A;
 }
 
+/*Personalización de las tablas */
 .table-custom thead th {
-        background-color: #6B5744; /* Color de fondo para los encabezados */
-        color: white; /* Color del texto para los encabezados */
-    }
-    .table-custom tbody td {
-        background-color: #f8f9fa; /* Color de fondo para las celdas */
-    }
-    .table-custom {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra sutil alrededor de la tabla */
-        border-collapse: separate; 
-        border-spacing: 0 15px; /* Espaciado entre filas */
-    }
-    #myCarousel {
-      width: 100%;  /* Ajusta esto según el ancho deseado, 100% tomará todo el ancho del contenedor padre */
-      max-height: 500px;  /* Ajusta la altura máxima del carrusel */
-      overflow: hidden;  /* Oculta cualquier parte de las imágenes que excedan la altura máxima */
-  }
-  @media (max-width: 768px) {
-    #myCarousel {
-        max-height: 300px;  /* Altura más pequeña para dispositivos móviles */
-    }
+  background-color: #6B5744; /* Color de fondo para los encabezados */
+  color: white; /* Color del texto para los encabezados */
 }
 
+.table-custom tbody td {
+  background-color: #f8f9fa; /* Color de fondo para las celdas */
+}
 
-  .carousel-item img {
-    width: 100%;  /* Asegura que la imagen ocupe todo el ancho del carrusel */
-    height: 500px;  /* Ajusta la altura para que sea consistente, independientemente del tamaño original de la imagen */
-    object-fit: cover;  /* Cubre el área del contenedor sin distorsionar la relación de aspecto */
+.table-custom {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra sutil alrededor de la tabla */
+  border-collapse: separate; 
+  border-spacing: 0 15px; /* Espaciado entre filas */
+}
+
+/*Estilos del carrousel de inicio */
+#myCarousel {
+  width: 100%;  /* Ajusta esto según el ancho deseado, 100% tomará todo el ancho del contenedor padre */
+  max-height: 500px;  /* Ajusta la altura máxima del carrusel */
+  overflow: hidden;  /* Oculta cualquier parte de las imágenes que excedan la altura máxima */
+}
+@media (max-width: 768px) {
+  #myCarousel {
+    max-height: 300px;  /* Altura más pequeña para dispositivos móviles */
+  }
+}
+.carousel-item img {
+  width: 100%;  /* Asegura que la imagen ocupe todo el ancho del carrusel */
+  height: 500px;  /* Ajusta la altura para que sea consistente, independientemente del tamaño original de la imagen */
+  object-fit: cover;  /* Cubre el área del contenedor sin distorsionar la relación de aspecto */
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #000; /* Fondo oscuro para mayor visibilidad */
-    border-radius: 50%; /* Hace los botones redondos */
-    width: 45px; /* Aumenta el tamaño del icono */
-    height: 45px;
+  background-color: #000; /* Fondo oscuro para mayor visibilidad */
+  border-radius: 50%; /* Hace los botones redondos */
+  width: 45px; /* Aumenta el tamaño del icono */
+  height: 45px;
 }
-  .carousel-control-prev, .carousel-control-next {
-      font-size: 18px; /* Aumenta el tamaño del texto de los botones */
-      background-color: rgba(0,0,0,0.5); /* Fondo semitransparente para mejorar visibilidad */
-      color: white; /* Texto blanco */
-      width: 45px;
-      height: 45px;
-  }
-  .carousel-control-prev span,
-  .carousel-control-next span {
-      color: white; /* Asegura que el texto sea blanco */
-  }
+.carousel-control-prev, .carousel-control-next {
+  font-size: 18px; /* Aumenta el tamaño del texto de los botones */
+  background-color: rgba(0,0,0,0.5); /* Fondo semitransparente para mejorar visibilidad */
+  color: white; /* Texto blanco */
+  width: 45px;
+  height: 45px;
+}
+.carousel-control-prev span,
+.carousel-control-next span {
+    color: white; /* Asegura que el texto sea blanco */
+}
 
+/*Personalización del mapa de inicio */
+#map {
+  height: 400px; /* O cualquier otra altura adecuada */
+  width: 100%; /* Asegura que tome el ancho del contenedor */
+}
 
-  #map {
-    height: 400px; /* O cualquier otra altura adecuada */
-    width: 100%; /* Asegura que tome el ancho del contenedor */
+img {
+  width: 100%;
+  height: auto;  /* Mantiene la proporción de aspecto de la imagen */
+}
+@media (max-width: 768px) {
+  img {
+      width: 100%;  /* Ajusta esto si necesitas un ancho diferente en dispositivos más pequeños */
+      margin-top: 20px;  /* Agrega espacio arriba de la imagen, si es necesario */
   }
+}
 
 
