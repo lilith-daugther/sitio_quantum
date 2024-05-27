@@ -59,7 +59,6 @@ body {
   font-family: 'Verdana',sans-serif !important;
 }
 p {
-  max-width: 60ch; /* ch es una unidad que representa el ancho del carácter '0' */
   letter-spacing: 0.5px;
   line-height: 1.6; /* Proporciona suficiente espacio vertical entre líneas de texto */
 }
@@ -74,7 +73,7 @@ p {
       margin-bottom: 20px; /* Añade un poco de espacio entre la imagen y el texto */
   }
   .row p {
-      font-size: 16px; /* Ajusta el tamaño de la fuente para mejorar la legibilidad en pantallas pequeñas */
+      font-size: 12px; /* Ajusta el tamaño de la fuente para mejorar la legibilidad en pantallas pequeñas */
   }
 }
 
@@ -179,6 +178,19 @@ p {
   outline: none; /* Elimina el contorno que algunos navegadores añaden al enfocar un botón */
   border-color: #4CAF50;
 }
+@media (max-width: 768px) {
+  .boton-personalizado-cafe {
+      padding: 12px 24px;  /* Aumenta el padding para facilitar la interacción en pantallas táctiles */
+      font-size: 16px;    /* Aumenta el tamaño de la fuente para mejor legibilidad */
+  }
+}
+
+@media (min-width: 769px) {
+  .boton-personalizado-cafe {
+      padding: 8px 16px;  /* Padding más pequeño para pantallas grandes */
+      font-size: 14px;    /* Tamaño de fuente estándar */
+  }
+}
 
 .boton-personalizado-verde {
   background-color: #687E45; /* Color de fondo verde */
@@ -206,6 +218,22 @@ p {
   outline: none; /* Elimina el contorno que algunos navegadores añaden al enfocar un botón */
   border-color: #3A2C1A;
 }
+@media (max-width: 768px) {
+  .boton-personalizado-verde {
+      padding: 12px 24px;  /* Aumenta el padding para facilitar la interacción en pantallas táctiles */
+      font-size: 16px;    /* Aumenta el tamaño de la fuente para mejor legibilidad */
+  }
+}
+
+@media (min-width: 769px) {
+  .boton-personalizado-verde {
+      padding: 8px 16px;  /* Padding más pequeño para pantallas grandes */
+      font-size: 14px;    /* Tamaño de fuente estándar */
+  }
+}
+
+
+
 
 /*Personalización de las tablas */
 .table-custom thead th {
@@ -219,8 +247,13 @@ p {
 
 .table-custom {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra sutil alrededor de la tabla */
-  border-collapse: separate; 
-  border-spacing: 0 15px; /* Espaciado entre filas */
+  
+}
+@media (max-width: 768px) {
+  .table-custom td, .table-custom th {
+    font-size: 12px; 
+      padding: 5px;  /* Reduce el padding de las celdas*/
+  }
 }
 
 /*Estilos del carrousel de inicio */
