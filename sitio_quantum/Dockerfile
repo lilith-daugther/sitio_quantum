@@ -1,22 +1,18 @@
-# Usar una imagen base oficial de Python
-FROM python:3.9-slim
+# Utiliza una imagen base oficial de Python
+FROM python:3.10.12-slim
 
-# Establecer el directorio de trabajo en el contenedor
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar el archivo de requisitos e instalar las dependencias
-COPY requirements.txt .
+# Copia el archivo de requisitos y lo instala
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el resto del código fuente del proyecto al contenedor
+# Copia el resto del proyecto Django en el contenedor
 COPY . .
 
-# Establecer variables de entorno necesarias
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-# Exponer el puerto en el que se ejecutará la aplicación
+# Expone el puerto 8000
 EXPOSE 8000
 
-# Ejecutar el servidor de Django al iniciar el contenedor
+# Ejecuta el servidor de desarrollo de Django al iniciar el contenedor
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
