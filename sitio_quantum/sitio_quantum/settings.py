@@ -129,14 +129,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Sent emails settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_PORT = 587  # Por ejemplo, el puerto 587 es común para SMTP con TLS
+EMAIL_PORT = 587  # el puerto 587 es común para SMTP con TLS
 EMAIL_HOST = 'smtp.gmail.com'
 
-EMAIL_HOST_USER = 'kaithlyn.mendez@gmail.com'
-EMAIL_HOST_PASSWORD = 'cgxy pezi xegj dvvi'
+EMAIL_HOST_USER = 'ambientalquantum2020@gmail.com'
+EMAIL_HOST_PASSWORD = ' '
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'kaithlyn.mendez@gmail.com'
-SERVER_EMAIL = 'kaithlyn.mendez@gmail.com'
+DEFAULT_FROM_EMAIL = 'ambientalquantum2020@gmail.com'
+SERVER_EMAIL = 'ambientalquantum2020@gmail.com'
 
 
 

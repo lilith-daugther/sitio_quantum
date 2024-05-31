@@ -11,7 +11,7 @@ def enviar_correo(request):
         mensaje = request.POST.get('mensaje', '')
 
         # Configura los detalles del correo electrónico
-        correo_destino = 'kaithlyn.mendez@gmail.com' #falta llave pública, revisar.
+        correo_destino = 'ambientalquantum2020@gmail.com' #falta llave pública, revisar.
         asunto_correo = f'Mensaje de {nombre}'
         cuerpo_correo = f'Nombre: {nombre}\nCorreo electrónico: {email}\n\nMensaje:\n{mensaje}'
 

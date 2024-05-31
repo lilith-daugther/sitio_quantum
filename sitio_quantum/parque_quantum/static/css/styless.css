@@ -309,3 +309,12 @@ img {
 }
 
 
+.row img {
+  margin-bottom: -1px; /* Sobreponer imágenes verticalmente */
+  z-index: 1;
+}
+.row img:hover {
+  z-index: 2; /* Trae la imagen al frente al pasar el mouse */
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+  transition: transform 0.3s;
+}
