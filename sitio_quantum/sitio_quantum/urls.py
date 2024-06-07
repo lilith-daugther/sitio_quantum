@@ -21,7 +21,7 @@ from django.urls import path
 from parque_quantum import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
+    path('admin/', admin.site.urls),
     path('', views.inicio, name='inicio'),
     path('areas/', views.areas, name='areas'),
     path('base/', views.base2, name='base'),

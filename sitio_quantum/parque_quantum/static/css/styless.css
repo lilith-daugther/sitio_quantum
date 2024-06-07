@@ -329,3 +329,45 @@ img {
   transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
   transition: transform 0.3s;
 }
+
+#header {
+  background-color: #687E45;
+  /*color: #687E45;*/
+}
+
+#site-name a {
+  color: #4CAF50;
+}
+
+/* static/css/admin_custom.css */
+.login #content-main form input[type="submit"] {
+  background-color: #687E45; 
+  color: #fff;
+}
+.welcome-message h1 {
+  color: #4CAF50; 
+  text-align: center;
+}
+
+.welcome-message p {
+  text-align: center;
+  color: #333;
+}
+.admin-login-background {
+  background-color: #000 !important;; 
+  background-size: cover;
+  background-position: center;
+}
+
+
+.login-form {
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+  border-radius: 8px;
+}
+.additional-text p {
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px; /* Ajusta el margen según sea necesario */
+  text-align: center;
+}
+

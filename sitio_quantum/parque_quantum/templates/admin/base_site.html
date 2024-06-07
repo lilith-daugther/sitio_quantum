@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+{% load static %} 
+
+{% block title %}Administrador{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styless.css' %}">
+{% endblock %}
+<h1>Bienvenido a tu sitio de Administración Parque Etnobiológico Quantum</h1>
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Bienvenido al Panel de Administración</a></h1>
+{% endblock %}
+

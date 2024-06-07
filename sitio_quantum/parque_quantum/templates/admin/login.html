@@ -1,0 +1,31 @@
+{% extends "admin/login.html" %}
+{% load static %}
+
+{% block bodyclass %}{{ block.super }} styless{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{{ block.super }}
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    body.login {
+        background-image: url("{% static 'media/images/recursos/bg.png' %}");
+        background-size: cover;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styless.css' %}">
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+
+<div class="additional-text">
+    <a href="{% url 'inicio' %}">
+    <br>
+        <p> <i class="fa-solid fa-arrow-left-long"></i> Regresar a la página </p>
+    </a>
+</div>
+{% endblock %}
