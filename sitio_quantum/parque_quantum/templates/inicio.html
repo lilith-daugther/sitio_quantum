@@ -102,26 +102,19 @@ Parque Etnobiológico
   <div class="container">
     <div class="row align-items-start">
       <div class="col-md-6 order-md-2">
-        <div id="map">
+       <div id="mapid" style="width: 500px; height: 400px;">
+        <script>
+          var myMap = L.map('mapid').setView([22.78385, -102.61206], 13); // Coordenadas y zoom inicial
 
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+          }).addTo(myMap);
+          var marker = L.marker([22.78385, -102.61206]).addTo(myMap);
+          marker.bindPopup("<b>Hola!</b><br>Estoy aquí.").openPopup();
+
+        </script>
         </div>
-    <script>
-      function initMap() {
-        var location = {lat: 22.784534, lng: -102.612045}; // Coordinates to center the map
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: location
-        });
-        var marker = new google.maps.Marker({
-          position: location,
-          map: map,
-          title: 'My location'
-        });
-      }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjRmm_aX1EVjvMyWphbwcybhEz-gYzqWk&callback=initMap"></script>
-
-
       </div>
       <div class="col-md-6 order-md-2">
         <br>
